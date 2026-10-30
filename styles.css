@@ -419,6 +419,40 @@ audio {
   width: min(52%, 490px);
 }
 
+.pinboard-with-note {
+  width: 100%;
+  max-width: 860px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(1.2rem, 4vw, 3.5rem);
+}
+
+.pinboard-with-note .pin-card-offset,
+.pinboard-with-note .pin-card-color {
+  margin-left: 0;
+}
+
+.chapter-note-card {
+  padding: clamp(1.5rem, 4vw, 2.8rem);
+  border-left: 2px solid var(--coral);
+  background: rgba(251, 248, 241, 0.68);
+}
+
+.chapter-note-label {
+  display: block;
+  color: var(--coral);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+}
+
+.chapter-note-card p {
+  margin: 0.85rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  line-height: 1.35;
+}
+
 .pinboard-gallery {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: start;
@@ -1087,6 +1121,20 @@ audio {
   .pinboard-quiz,
   .pinboard-voice {
     width: 100%;
+  }
+
+  .pinboard-with-note {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .chapter-note-card {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .chapter-note-card p {
+    margin-top: 0.55rem;
+    font-size: 1.35rem;
   }
 
   .pinboard-gallery {
